@@ -19,16 +19,17 @@ public class PersonsController {
     private PersonsRepository user;
  
     @RequestMapping("/create")
-    public int createPerson(@RequestParam String login, @RequestParam String firstName, @RequestParam String lastName, @RequestParam String phoneNumber, @RequestParam String password, @RequestParam Integer visitedMuseum,@RequestParam Integer nowCoin, @RequestParam Integer allCoin){
-    return user.createPerson(login, firstName, lastName, phoneNumber, password, visitedMuseum, nowCoin, allCoin);
+    public int createPerson(@RequestParam String login, @RequestParam String firstName, @RequestParam String lastName, @RequestParam String phoneNumber, @RequestParam String password, @RequestParam Integer visitedMuseum, @RequestParam Integer allCoin){
+    return user.createPerson(login, firstName, lastName, phoneNumber, password, visitedMuseum, allCoin);
     }
  
     @RequestMapping("/update")
-    public int updatePerson(@RequestParam Integer id, @RequestParam String name){
+    public int updatePerson(@RequestParam Integer id, @RequestParam Integer allCoin, @RequestParam Integer visitedMuseum){
         Users p = new Users();
         try{
             p.setId(id);
-            p.setFirstName(name);
+            p.setAllCoin(allCoin);
+            p.setVisitedMuseum(visitedMuseum);
         }catch(JSONException e){
             e.getLocalizedMessage();
             return 0;

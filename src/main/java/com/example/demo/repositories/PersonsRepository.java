@@ -13,12 +13,12 @@ public class PersonsRepository {
  
     @Autowired
     private JdbcTemplate jdbcTemplate;
-    public int createPerson(String login, String firstName, String lastName, String phoneNumber, String password, Integer visitedMuseum, Integer nowCoin, Integer allCoin){
-        return jdbcTemplate.update("INSERT INTO \"USER\" (\"FIRSTNAME\", \"LASTNAME\", \"VISITEDMUSEUM\", \"NOWCOIN\", \"ALLCOIN\", \"PHONNUMBER\", \"LOGIN\", \"PASSWORD\") VALUES (?, ?, ?, ?, ?, ?, ?, ?)", firstName, lastName, visitedMuseum, nowCoin, allCoin, phoneNumber, login, password);
+    public int createPerson(String login, String firstName, String lastName, String phoneNumber, String password, Integer visitedMuseum, Integer allCoin){
+        return jdbcTemplate.update("INSERT INTO \"USER\" (\"FIRSTNAME\", \"LASTNAME\", \"VISITEDMUSEUM\", \"ALLCOIN\", \"PHONNUMBER\", \"LOGIN\", \"PASSWORD\") VALUES (?, ?, ?, ?, ?, ?, ?)", firstName, lastName, visitedMuseum, allCoin, phoneNumber, login, password);
     }
  
     public int updatePerson(Users person){
-        return jdbcTemplate.update("UPDATE \"USER\" SET \"FIRSTNAME\" = ? WHERE \"ID\" = ?", person.getFirstName(), person.getId());
+        return jdbcTemplate.update("UPDATE \"USER\" SET \"ALLCOIN\" = ?, \"VISITEDMUSEUM\" = ? WHERE \"ID\" = ?", person.getAllCoin(), person.getVisitedMuseum(), person.getId());
     }
  
     public int deletePerson(Integer id){

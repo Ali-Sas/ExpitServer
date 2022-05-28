@@ -18,7 +18,6 @@ public class PersonsMapper implements RowMapper<Users> {
         user.setPassword(rs.getString("password"));
         user.setPhoneNmber(rs.getString("phonNumber"));
         user.setVisitedMuseum(rs.getInt("visitedMuseum"));
-        user.setNowCoin(rs.getInt("nowCoin"));
         user.setAllCoin(rs.getInt("allCoin"));
         return user;
     }

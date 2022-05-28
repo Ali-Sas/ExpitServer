@@ -3,7 +3,7 @@ package com.example.demo.entity;
 public class Users {
 	public Integer id;
     public String login, firstName,lastName, phoneNumber, password;
-    public Integer visitedMuseum, nowCoin, allCoin;
+    public Integer visitedMuseum, allCoin;
  
     public Integer getId() {
         return id;
@@ -21,9 +21,6 @@ public class Users {
         this.visitedMuseum = museumCount;
     }
     
-    public Integer getNowCoin() {
-        return nowCoin;
-    }
  
     public void setLogin(String login) {
         this.login = login;
@@ -33,10 +30,6 @@ public class Users {
         return login;
     }
  
-    public void setNowCoin(Integer coin) {
-        this.nowCoin = coin;
-    }
-    
     public Integer getAllCoin() {
         return allCoin;
     }
