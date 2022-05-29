@@ -13,8 +13,8 @@ public class MuseumsRepository {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
-    public int createMuseum(String nameMuseum, String countryMuseum, String imageMuseum, String coordsMuseum, String infoMuseum){
-        return jdbcTemplate.update("INSERT INTO \"MUSEUMS\" (\"NAME\", \"COUNTRY\", \"IMAGE\", \"COORDS\", \"INFO\") VALUES (?, ?, ?, ?, ?)", nameMuseum, countryMuseum, imageMuseum, coordsMuseum, infoMuseum);
+    public int createMuseum(String nameMuseum, String countryMuseum, String imageMuseum, String coordsMuseum, String infoMuseum, String ratingMuseum){
+        return jdbcTemplate.update("INSERT INTO \"MUSEUMS\" (\"NAME\", \"COUNTRY\", \"IMAGE\", \"COORDS\", \"INFO\", \"ESTIMATION\") VALUES (?, ?, ?, ?, ?, ?)", nameMuseum, countryMuseum, imageMuseum, coordsMuseum, infoMuseum, ratingMuseum);
     }
 
     public int deleteMuseum(Integer id){

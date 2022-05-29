@@ -18,8 +18,8 @@ public class MuseumsController {
     private MuseumsRepository museum;
  
     @RequestMapping("/create")
-    public int createMuseum(@RequestParam String nameMuseum, @RequestParam String countryMuseum, @RequestParam String imageMuseum, @RequestParam String coordsMuseum, @RequestParam String infoMuseum){
-    return museum.createMuseum(nameMuseum, countryMuseum, imageMuseum, coordsMuseum, infoMuseum);
+    public int createMuseum(@RequestParam String nameMuseum, @RequestParam String countryMuseum, @RequestParam String imageMuseum, @RequestParam String coordsMuseum, @RequestParam String infoMuseum, @RequestParam String ratingMuseum){
+    return museum.createMuseum(nameMuseum, countryMuseum, imageMuseum, coordsMuseum, infoMuseum, ratingMuseum);
     }
  
     @RequestMapping("/id")

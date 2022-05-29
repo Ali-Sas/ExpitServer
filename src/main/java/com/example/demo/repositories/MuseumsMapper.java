@@ -18,6 +18,7 @@ public class MuseumsMapper implements RowMapper<Museums>{
         museums.setImageMuseum(rs.getString("image"));
         museums.setCoordsMuseum(rs.getString("coords"));
         museums.setInfoMuseum(rs.getString("info"));
+        museums.setRatingMuseum(rs.getString("estimation"));
         return museums;
     }
 

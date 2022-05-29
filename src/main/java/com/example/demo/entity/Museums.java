@@ -2,7 +2,7 @@ package com.example.demo.entity;
 
 public class Museums {
     public Integer id;
-    public String nameMuseum, countryMuseum, imageMuseum, coordsMuseum, infoMuseum;
+    public String nameMuseum, countryMuseum, imageMuseum, coordsMuseum, infoMuseum, ratingMuseum;
 
     public Integer getId() {
         return id;
@@ -50,6 +50,14 @@ public class Museums {
 
     public String getInfoMuseum() {
         return infoMuseum;
+    }
+    
+    public void setRatingMuseum(String rating) {
+        this.ratingMuseum = rating;
+    }
+
+    public String getRatingMuseum() {
+        return ratingMuseum;
     }
 
 }
