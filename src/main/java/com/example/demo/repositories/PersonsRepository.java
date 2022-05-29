@@ -17,12 +17,12 @@ public class PersonsRepository {
         return jdbcTemplate.update("INSERT INTO \"USER\" (\"FIRSTNAME\", \"LASTNAME\", \"VISITEDMUSEUM\", \"ALLCOIN\", \"PHONNUMBER\", \"LOGIN\", \"PASSWORD\") VALUES (?, ?, ?, ?, ?, ?, ?)", firstName, lastName, visitedMuseum, allCoin, phoneNumber, login, password);
     }
  
-    public int updatePerson(Users person){
-        return jdbcTemplate.update("UPDATE \"USER\" SET \"ALLCOIN\" = ?, \"VISITEDMUSEUM\" = ? WHERE \"ID\" = ?", person.getAllCoin(), person.getVisitedMuseum(), person.getId());
-    }
- 
     public int deletePerson(Integer id){
         return jdbcTemplate.update("DELETE FROM \"USER\" WHERE \"ID\" = ?",id);
+    }
+    
+    public int updatePerson(Users person){
+        return jdbcTemplate.update("UPDATE \"USER\" SET \"ALLCOIN\" = ?, \"VISITEDMUSEUM\" = ? WHERE \"ID\" = ?", person.getAllCoin(), person.getVisitedMuseum(), person.getId());
     }
  
     public Users getPerson(String login){
