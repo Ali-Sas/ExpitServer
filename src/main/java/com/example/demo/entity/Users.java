@@ -3,7 +3,7 @@ package com.example.demo.entity;
 public class Users {
 	public Integer id;
     public String login, firstName,lastName, phoneNumber, password;
-    public Integer visitedMuseum, allCoin;
+    public Integer visitedMuseum, allCoin, commentCount;
  
     public Integer getId() {
         return id;
@@ -12,6 +12,8 @@ public class Users {
     public void setId(Integer id) {
         this.id = id;
     }
+    
+ 
     
     public Integer getVisitedMuseum() {
         return visitedMuseum;
