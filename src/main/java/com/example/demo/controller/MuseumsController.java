@@ -28,7 +28,7 @@ public class MuseumsController {
     }
  
     @RequestMapping("/getmuseum")
-    public Museums getMuseum(@RequestParam String id){
+    public Museums getMuseum(@RequestParam Integer id){
         return museum.getMuseum(id);
     }
  

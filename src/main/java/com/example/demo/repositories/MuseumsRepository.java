@@ -20,9 +20,9 @@ public class MuseumsRepository {
     public int deleteMuseum(Integer id){
         return jdbcTemplate.update("DELETE FROM \"MUSEUMS\" WHERE \"ID\" = ?",id);
     }
- 
-    public Museums getMuseum(String name){
-        return jdbcTemplate.queryForObject("SELECT * FROM \"MUSEUMS\" WHERE \"NAME\"=?", new MuseumsMapper(), name);
+    
+    public Museums getMuseum(Integer id){
+        return jdbcTemplate.queryForObject("SELECT * FROM \"MUSEUMS\" WHERE \"ID\"=?", new MuseumsMapper(), id);
     }
  
     public List<Museums> getMuseums(){
