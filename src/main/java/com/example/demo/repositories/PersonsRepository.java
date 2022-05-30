@@ -22,7 +22,7 @@ public class PersonsRepository {
     }
     
     public int updatePerson(Users person){
-        return jdbcTemplate.update("UPDATE \"USER\" SET \"ALLCOIN\" = ?, \"VISITEDMUSEUM\" = ?, \"COMMENT_COUNT\" = ? WHERE \"ID\" = ?", person.getAllCoin(), person.getVisitedMuseum(), person.getId(), person.getCommentCount());
+        return jdbcTemplate.update("UPDATE \"USER\" SET \"ALLCOIN\" = ?, \"VISITEDMUSEUM\" = ?, \"COMMENT_COUNT\" = ? WHERE \"ID\" = ?", person.getAllCoin(), person.getVisitedMuseum(), person.getCommentCount(), person.getId());
     }
  
     public Users getPerson(String login){
