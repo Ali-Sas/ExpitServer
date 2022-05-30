@@ -53,7 +53,4 @@ public class Comments {
 	public double getEstimationMuseum() {
 		return this.estimationMuseum;
 	}
-
-
-
 }

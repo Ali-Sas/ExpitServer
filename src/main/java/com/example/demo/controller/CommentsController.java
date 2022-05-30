@@ -26,8 +26,8 @@ public class CommentsController {
         return comments.deleteComment(id);
     }
 
-    @RequestMapping("/gecomment")
-    public Comments getComment(@RequestParam String id){
+    @RequestMapping("/getcomment")
+    public List<Comments> getComment(@RequestParam Integer id){
         return comments.getComment(id);
     }
  

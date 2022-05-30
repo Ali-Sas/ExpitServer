@@ -21,8 +21,8 @@ public class CommentsRepository {
         return jdbcTemplate.update("DELETE FROM \"COMMENTS\" WHERE \"ID\" = ?",id);
     }
  
-    public Comments getComment(String name){
-        return jdbcTemplate.queryForObject("SELECT * FROM \"COMMENTS\" WHERE \"NAME\"=?", new CommentsMapper(), name);
+	public List<Comments> getComment(Integer id){
+        return jdbcTemplate.query("SELECT * FROM \"COMMENTS\" WHERE \"MUSEUM_ID\"=?", new CommentsMapper(), id);
     }
  
     public List<Comments> getComments(){
