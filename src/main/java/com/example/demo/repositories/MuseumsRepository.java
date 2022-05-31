@@ -38,8 +38,16 @@ public class MuseumsRepository {
         return jdbcTemplate.query("SELECT * FROM \"MUSEUMS\" WHERE \"COUNTRY\"=? ORDER BY \"ESTIMATION\" DESC", new MuseumsMapper(), id);
     }
     
+    public List<Museums> getMuseumSortUpNull(){
+        return jdbcTemplate.query("SELECT * FROM \"MUSEUMS\" ORDER BY \"ESTIMATION\" DESC", new MuseumsMapper());
+    }
+    
     public List<Museums> getMuseumSortDown(String id){
         return jdbcTemplate.query("SELECT * FROM \"MUSEUMS\" WHERE \"COUNTRY\"=? ORDER BY \"ESTIMATION\"", new MuseumsMapper(), id);
+    }
+    
+    public List<Museums> getMuseumSortDownNull(){
+        return jdbcTemplate.query("SELECT * FROM \"MUSEUMS\" ORDER BY \"ESTIMATION\"", new MuseumsMapper());
     }
 
     public List<Museums> getMuseumSortName(String id){
@@ -48,5 +56,9 @@ public class MuseumsRepository {
  
     public List<Museums> getMuseums(){
         return jdbcTemplate.query("SELECT * FROM \"MUSEUMS\"", new MuseumsMapper());
+    }
+    
+    public List<Museums> getMuseumsNull(String country){
+        return jdbcTemplate.query("SELECT * FROM \"MUSEUMS\" WHERE \"COUNTRY\"=?", new MuseumsMapper(), country);
     }
 }

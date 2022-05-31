@@ -37,9 +37,19 @@ public class MuseumsController {
         return museum.getMuseum2(countryMuseum);
     }
     
+    @RequestMapping("/getmuseumsnull")
+    public List<Museums> getMuseumNull(@RequestParam String countryMuseum){
+        return museum.getMuseumsNull(countryMuseum);
+    }
+    
     @RequestMapping("/getmuseumsortup")
     public List<Museums> getMuseumSortUp(@RequestParam String countryMuseum){
         return museum.getMuseumSortUp(countryMuseum);
+    }
+    
+    @RequestMapping("/getmuseumsortupnull")
+    public List<Museums> getMuseumSortUpNull(){
+        return museum.getMuseumSortUpNull();
     }
     
     @RequestMapping("/getmuseumsortname")
@@ -50,6 +60,11 @@ public class MuseumsController {
     @RequestMapping("/getmuseumsortdown")
     public List<Museums> getMuseumSortDown(@RequestParam String countryMuseum){
         return museum.getMuseumSortDown(countryMuseum);
+    }
+    
+    @RequestMapping("/getmuseumsortdownnull")
+    public List<Museums> getMuseumSortDownNull(){
+        return museum.getMuseumSortDownNull();
     }
     
     @RequestMapping("/getmuseums")
