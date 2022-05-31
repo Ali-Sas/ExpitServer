@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import com.example.demo.entity.Museums;
+import com.example.demo.entity.Users;
 
 @Component
 public class MuseumsRepository {
@@ -56,6 +57,10 @@ public class MuseumsRepository {
  
     public List<Museums> getMuseums(){
         return jdbcTemplate.query("SELECT * FROM \"MUSEUMS\"", new MuseumsMapper());
+    }
+    
+    public int museumUpdate(String estimation, Integer id){
+        return jdbcTemplate.update("UPDATE \"MUSEUMS\" SET \"ESTIMATION\" = ? WHERE \"ID\" = ?", estimation, id);
     }
     
     public List<Museums> getMuseumsNull(String country){

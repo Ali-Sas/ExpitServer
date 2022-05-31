@@ -62,6 +62,11 @@ public class MuseumsController {
         return museum.getMuseumSortDown(countryMuseum);
     }
     
+    @RequestMapping("/update")
+    public int museumUpdate(@RequestParam String estimation,@RequestParam Integer id ){
+        return museum.museumUpdate(estimation, id);
+    }
+    
     @RequestMapping("/getmuseumsortdownnull")
     public List<Museums> getMuseumSortDownNull(){
         return museum.getMuseumSortDownNull();
