@@ -31,6 +31,11 @@ public class MuseumsController {
     public Museums getMuseum(@RequestParam Integer id){
         return museum.getMuseum(id);
     }
+    
+    @RequestMapping("/getmuseumcountry")
+    public List<Museums> getMuseum2(@RequestParam String countryMuseum){
+        return museum.getMuseum2(countryMuseum);
+    }
  
     @RequestMapping("/getmuseums")
     public List<Museums> getMuseums(){

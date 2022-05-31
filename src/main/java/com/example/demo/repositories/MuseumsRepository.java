@@ -24,6 +24,10 @@ public class MuseumsRepository {
     public Museums getMuseum(Integer id){
         return jdbcTemplate.queryForObject("SELECT * FROM \"MUSEUMS\" WHERE \"ID\"=?", new MuseumsMapper(), id);
     }
+    
+    public List<Museums> getMuseum2(String id){
+        return jdbcTemplate.query("SELECT * FROM \"MUSEUMS\" WHERE \"COUNTRY\"=?", new MuseumsMapper(), id);
+    }
  
     public List<Museums> getMuseums(){
         return jdbcTemplate.query("SELECT * FROM \"MUSEUMS\"", new MuseumsMapper());
