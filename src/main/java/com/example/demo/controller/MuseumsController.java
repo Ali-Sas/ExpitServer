@@ -42,7 +42,7 @@ public class MuseumsController {
         return museum.getMuseumSortUp(countryMuseum);
     }
     
-    @RequestMapping("/getmuseumsortup")
+    @RequestMapping("/getmuseumsortname")
     public List<Museums> getMuseumSortName(@RequestParam String countryMuseum){
         return museum.getMuseumSortName(countryMuseum);
     }
