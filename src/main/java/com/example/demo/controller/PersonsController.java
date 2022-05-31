@@ -52,4 +52,9 @@ public class PersonsController {
     public List<Users> getPersons(){
         return user.getPersons();
     }
+    
+    @RequestMapping("/getpersonstop")
+    public List<Users> getPersonsTop(){
+        return user.getPersonsTop();
+    }
 }

@@ -32,5 +32,9 @@ public class PersonsRepository {
     public List<Users> getPersons(){
         return jdbcTemplate.query("SELECT * FROM \"USER\"", new PersonsMapper());
     }
+    
+    public List<Users> getPersonsTop(){
+        return jdbcTemplate.query("SELECT * FROM \"USER\" ORDER BY \"ALLCOIN\" DESC", new PersonsMapper());
+    }
 
 }

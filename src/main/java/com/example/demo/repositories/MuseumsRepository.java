@@ -7,7 +7,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import com.example.demo.entity.Museums;
-import com.example.demo.entity.Users;
 
 @Component
 public class MuseumsRepository {
