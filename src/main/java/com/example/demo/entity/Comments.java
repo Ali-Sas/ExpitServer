@@ -34,11 +34,11 @@ public class Comments {
 		this.lastName = lastName;
 	}
 	
-	public String setDate() {
+	public String getDate() {
 		return this.firstName;
 	}
 	
-	public void getDate(String date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 	
