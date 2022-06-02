@@ -35,7 +35,7 @@ public class Comments {
 	}
 	
 	public String getDate() {
-		return this.firstName;
+		return this.date;
 	}
 	
 	public void setDate(String date) {
