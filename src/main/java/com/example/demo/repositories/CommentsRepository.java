@@ -13,8 +13,8 @@ public class CommentsRepository {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
-    public int createComment(String firstName, String lastName, String comment, Double estimationMuseum, Integer museumId){
-        return jdbcTemplate.update("INSERT INTO \"COMMENTS\" (\"FIRSTNAME\", \"LASTNAME\", \"COMMENT\", \"ESTIMATION\", \"MUSEUM_ID\") VALUES (?, ?, ?, ?, ?)", firstName, lastName, comment, estimationMuseum, museumId);
+    public int createComment(String firstName, String lastName, String comment, Double estimationMuseum, Integer museumId, String date){
+        return jdbcTemplate.update("INSERT INTO \"COMMENTS\" (\"FIRSTNAME\", \"LASTNAME\", \"COMMENT\", \"ESTIMATION\", \"MUSEUM_ID\", \"DATE\") VALUES (?, ?, ?, ?, ?, ?)", firstName, lastName, comment, estimationMuseum, museumId, date);
     }
 
     public int deleteComment(Integer id){

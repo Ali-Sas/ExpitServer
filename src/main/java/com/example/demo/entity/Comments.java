@@ -2,7 +2,7 @@ package com.example.demo.entity;
 
 public class Comments {
 	public Integer id;
-	public String firstName, lastName, comment;
+	public String firstName, lastName, comment, date;
 	public Integer museumId;
 	public double estimationMuseum;
 	
@@ -32,6 +32,14 @@ public class Comments {
 	
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+	
+	public String setDate() {
+		return this.firstName;
+	}
+	
+	public void setDate(String date) {
+		this.date = date;
 	}
 	
 	public String getLastName() {

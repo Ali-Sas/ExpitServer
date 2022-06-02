@@ -17,8 +17,8 @@ public class CommentsController {
     private CommentsRepository comments;
     
     @RequestMapping("/create")
-    public int createComment(@RequestParam String firstName, @RequestParam String lastName, @RequestParam String comment, @RequestParam Double estimationMuseum, @RequestParam Integer museumId){
-    	return comments.createComment(firstName, lastName, comment, estimationMuseum, museumId);
+    public int createComment(@RequestParam String firstName, @RequestParam String lastName, @RequestParam String comment, @RequestParam Double estimationMuseum, @RequestParam Integer museumId, @RequestParam String date){
+    	return comments.createComment(firstName, lastName, comment, estimationMuseum, museumId, date);
     }
 
     @RequestMapping("/id")

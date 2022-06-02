@@ -16,6 +16,7 @@ public class CommentsMapper implements RowMapper<Comments>{
         comments.setComment(rs.getString("comment"));
         comments.setEstimationMuseum(rs.getDouble("estimation"));
         comments.setIdMuseum(rs.getInt("museum_id"));
+        comments.setDate(rs.getString("date"));
         return comments;
     }
 
