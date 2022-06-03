@@ -26,6 +26,6 @@ public class CommentsRepository {
     }
  
     public List<Comments> getComments(){
-        return jdbcTemplate.query("SELECT * FROM \"COMMENTS\"", new CommentsMapper());
+        return jdbcTemplate.query("SELECT * FROM \"COMMENTS\" ORDER BY \"DATE\"", new CommentsMapper());
     }
 }
